@@ -6,6 +6,7 @@
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="">
+    <script src="http://echarts.baidu.com/dist/echarts.js"></script>
     <script >
         function drawcirclelist(x,y,n,ctx,color){
                 ctx.fillStyle =color;
@@ -196,6 +197,49 @@
                     <li>通过CET-6，具有良好的英语阅读能力</li>
                 </ul>
                 </div>
+
+                <div id="main2" style="width: 600px;height:400px;margin:0 auto;"></div>
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main2'));
+            
+                    // 指定图表的配置项和数据
+                    var option = {
+                        title: {
+                            text: 'ECharts 入门示例'
+                        },
+                        tooltip: {},
+                        legend: {
+                            data:['销量1','销量2']
+                        },
+                        xAxis: {
+                            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+                        },
+                        yAxis: {},
+                     dataZoom: [
+                    {   // 这个dataZoom组件，默认控制x轴。
+                        type: 'slider', // 这个 dataZoom 组件是 slider 型 dataZoom 组件
+                        start: 0,      // 左边在 10% 的位置。
+                        end: 100         // 右边在 60% 的位置。
+                    }
+                ],
+                        series: [
+                          {
+                            name: '销量1',
+                            type: 'bar',
+                            data: [5, 20, 36, 10, 10, 20]
+                        },
+                        {
+                            name: '销量2',
+                            type: 'bar',
+                            data: [15, 25, 34, 15, 5, 25]
+                        }
+                      ]
+                    };
+            
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
         
     </div>
     <div id="footer">
