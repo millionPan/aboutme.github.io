@@ -4,34 +4,38 @@
     padding: 0px;
     font-family: "微软雅黑";
 }
-/* 与print不同 */
-body{ 
-    /* 页面所有元素都居中显示 */
-    position:relative;
-    top:0;
-    left:195px;
-    
-}
-/* 盒子 */
+/* 页面盒子 */
 #box{
     width: 960px;
+    margin:0 auto;
 }
 /* 头部字体颜色 */
 #header{
     color: white;
 }
-/* 头部名字 */
+/* 头部背景canvas */
+#headerbgi{
+    position:absolute;
+    z-index:-1
+}
+/* 头部信息 */
+.hmess{
+    display: flex;
+    height: 250px;
+}
+/* 文字描述 */
+.wzms{
+   
+    padding-left: 80px;
+}
+/* 名字 */
 .name{
 font-size: 50px;
- position:absolute;
- left:80px;
- top:60px;   
+padding-top:60px;
 }
-/* 头部个人信息 */
+/* 个人信息 */
 .info { 
-position:absolute;
- left:100px;
- top:175px;
+    padding-top:40px; 
 }
  .info li{
  display:inline;
@@ -43,13 +47,16 @@ position:absolute;
     padding-right: 2px;
 }
 /* 证件照盒子div */
+#photoarea{
+   width: 20%;
+   padding-top:40px;
+   padding-left:15px;
+}
 #photobox{
  width: 114.3px;
  height: 160px;
  overflow: hidden;
- position:absolute;
- left:750px;
- top:40px; 
+
  background-color: white;
  color:black;
 }
