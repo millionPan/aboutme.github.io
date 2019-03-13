@@ -1,0 +1,115 @@
+*{
+            
+    margin: 0px;
+    padding: 0px;
+    font-family: "微软雅黑";
+}
+/* 与print不同 */
+body{ 
+    /* 页面所有元素都居中显示 */
+    position:relative;
+    top:0;
+    left:195px;
+    
+}
+/* 盒子 */
+#box{
+    width: 960px;
+}
+/* 头部字体颜色 */
+#header{
+    color: white;
+}
+/* 头部名字 */
+.name{
+font-size: 50px;
+ position:absolute;
+ left:80px;
+ top:60px;   
+}
+/* 头部个人信息 */
+.info { 
+position:absolute;
+ left:100px;
+ top:175px;
+}
+ .info li{
+ display:inline;
+ display:inline-block;
+ font-size: 23px;
+ padding-right: 20px;
+}
+.info li:nth-child(odd){
+    padding-right: 2px;
+}
+/* 证件照盒子div */
+#photobox{
+ width: 114.3px;
+ height: 160px;
+ overflow: hidden;
+ position:absolute;
+ left:750px;
+ top:40px; 
+ background-color: white;
+ color:black;
+}
+/* 证件照图片 */
+.photo{
+    width: 114.3px;
+    height: 167.47px;
+  
+}
+/* 表格：教育背景、实践经历、项目经历 */
+#edub td,#workexp td ,#progexp td{
+    padding: 10px;
+    padding-right: 30px;
+    font-size: 20px;
+    color: rgb(1,97,105);
+    position: relative;
+    left: 112px;
+    font-weight: 700;
+} 
+/* 段落：教育背景、项目经历 */
+#edub p,#progexp p{
+    font-size: 20px; 
+    font-weight: bold;
+    position: relative;
+    left: 112px;
+    width:730px;
+}
+/* 列表：实践经历、工作技能、项目经历 */
+#workexp li,#skills li,#progexp li{
+    font-size: 18px; 
+    position: relative;
+    left: 135px;
+    width:720px;
+    padding-top: 8px;
+}
+/* 表格：奖项荣誉 */
+#awards td{
+    padding: 10px;
+    padding-right: 30px;
+    font-size: 18px;
+    position: relative;
+    left: 112px;
+    color: black;
+}
+/* echarts:教育背景、工作技能 */
+#eduech ,#skiech{
+    width: 683px;
+    height:304.5px;
+    padding: 15px;
+    margin:0 auto;
+}
+#eduech{
+    display: block;
+}
+#skiech{
+    display: block;
+}
+/* 文字云：教育背景 */
+#eduech img{
+    width: 683px;
+    height:304.5px;
+    border-radius: 10px;
+}
