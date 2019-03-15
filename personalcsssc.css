@@ -13,7 +13,7 @@
 #header{
     color: white;
 }
-/* 头部背景canvas */
+/* 头部背景svg*/
 #headerbgi{
     position:absolute;
     z-index:-1
@@ -68,18 +68,18 @@ padding-top:60px;
 }
 /* 表格：教育背景、实践经历、项目经历 */
 #edub td,#workexp td ,#progexp td{
-    padding: 10px;
+    padding:8px;
     padding-right: 30px;
     font-size: 20px;
     color: rgb(1,97,105);
     position: relative;
-    left: 112px;
-    font-weight: 700;
+    left: 102px;
+    font-weight: 700; 
 } 
 /* 段落：教育背景、项目经历 */
 #edub p,#progexp p{
     font-size: 20px; 
-    font-weight: bold;
+    font-weight: 600;
     position: relative;
     left: 112px;
     width:730px;
@@ -94,7 +94,7 @@ padding-top:60px;
 }
 /* 表格：奖项荣誉 */
 #awards td{
-    padding: 10px;
+    padding: 8px;
     padding-right: 30px;
     font-size: 18px;
     position: relative;
@@ -102,21 +102,24 @@ padding-top:60px;
     color: black;
 }
 /* echarts:教育背景、工作技能 */
-#eduech ,#skiech{
+#eduech,#skiech{
     width: 683px;
     height:304.5px;
     padding: 15px;
     margin:0 auto;
 }
-#eduech{
-    display: block;
-}
-#skiech{
-    display: block;
-}
+
 /* 文字云：教育背景 */
 #eduech img{
     width: 683px;
     height:304.5px;
     border-radius: 10px;
 }
+
+svg text{
+    font-family: "微软雅黑";
+    font-size: 24px;
+    font-weight:700;
+}
+
+

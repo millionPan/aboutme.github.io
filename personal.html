@@ -9,20 +9,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./personalcsssc.css" >
   
     <script src="./echarts.common.min.js"></script>
-    <script src="./personaljs.js"></script>
+    
 
-</head>
 <body>
     <div id="box">
       <div id="header">
-        <canvas id="headerbgi" width="960" height="250"></canvas>
-          <script>
-            var canvas = document.getElementById('headerbgi');
-            var ctx=canvas.getContext('2d');
-            ctx.fillStyle = "rgb(1,97,105)";
-            ctx.fillRect(0,0,960,230);
-            drawcirclelist(7.5,230,64,ctx,"rgb(1,97,105)");
-          </script>
+        <svg width="960" height="250" id="headerbgi">
+         <rect width="960" height="230" x="0" y="0" fill='rgb(1,97,105)'/>
+        </svg>
+        <script>
+                
+                
+            </script>
           <div class="hmess">
               <div class="wzms">
         <h1 class="name">潘兆欣</h1>
@@ -43,14 +41,20 @@
         </div>     
     <div id="mainbody">
         <div id="edub">
-                <canvas id="edubi" width="960px" height="60px" onclick="showecharts('eduech');changeDir('edubi','教育背景')"></canvas>
-                <script>
-                   var direction="down";
-                    var canvas = document.getElementById('edubi');
-                    var ctx=canvas.getContext('2d');
-                    sepi(ctx,40,32,"rgb(1,97,105)","教育背景");
-                    arrow(direction,28,ctx);
-               </script>
+                <svg width="960" height="60" id="edubi" onclick="showecharts('eduech');changeDire()">
+                        <path d="M 94 56 A 32 32,0,1,1,149 56 z h 766 " 
+                        fill="rgb(1,97,105)" stroke="rgb(1,97,105)" stroke-width="3" />
+                        <rect x="825" y="28" rx="10" ry="10" width="36" height="18" fill="rgb(1,97,105)" />
+                        <path id="arrowdowne" 
+                              d="M 110 24 L 122 34 L134 24 
+                                 M 110 34 L 122 44 L134 34" stroke="white" stroke-width="3" fill="none" style="display:none" />
+                        
+                                 <path id="arrowupe" 
+                             d="M 110 34 L 122 24 L 134 34 
+                                M 110 44 L 122 34 L134 44" stroke="white" stroke-width="3" fill="none" style="display:block" />
+                                <text x="170" y="43" fill="rgb(1,97,105)" >教育背景</text>
+                  </svg>
+               
                 <table><tr>
                     <td>暨南大学</td>
                     <td>经济学院</td>
@@ -59,19 +63,20 @@
                 </tr></table>
                 <p>主修课程：多元统计分析、数据挖掘、经济计量学、时间序列分析、数理统计等</p>
                  
-                <div id="eduech">
+                <div id="eduech" style="display:block">
                     <img src="./images/eduwc.png" alt="">
                 </div>
         
        
     </div>
     <div id="workexp">
-            <canvas id="workexpi" width="960px" height="60px"></canvas>
-            <script>
-            var canvas = document.getElementById('workexpi');
-            var ctx=canvas.getContext('2d');
-            sepi(ctx,40,32,"rgb(1,97,105)","实践经历");
-            </script>
+            <svg width="960" height="60" id="workexpi">
+                    <path d="M 94 56 A 32 32,0,1,1,149 56 z h 766 " 
+                    fill="rgb(1,97,105)" stroke="rgb(1,97,105)" stroke-width="3" />
+                    <rect x="825" y="28" rx="10" ry="10" width="36" height="18" fill="rgb(1,97,105)" />
+                   
+                            <text x="170" y="43" fill="rgb(1,97,105)" >实践经历</text>
+              </svg>
             <table>
                 <tr>
                     <td>2018.01-2019.01</td>
@@ -95,12 +100,13 @@
                 <li>核算近期物料的总用量，并预计下期的物料采购量</li></ul>
                 </div>
  <div id="progexp">
-          <canvas id="progexpi" width="960px" height="60px"></canvas>
-          <script>
-          var canvas = document.getElementById('progexpi');
-          var ctx=canvas.getContext('2d');
-          sepi(ctx,40,32,"rgb(1,97,105)","项目经历");
-          </script>
+        <svg width="960" height="60" id="progexp">
+                <path d="M 94 56 A 32 32,0,1,1,149 56 z h 766 " 
+                fill="rgb(1,97,105)" stroke="rgb(1,97,105)" stroke-width="3" />
+                <rect x="825" y="28" rx="10" ry="10" width="36" height="18" fill="rgb(1,97,105)" />
+               
+                        <text x="170" y="43" fill="rgb(1,97,105)" >项目经历</text>
+          </svg>
           <table><tr>
                   <td>2017.10-2018.05</td>
                   <td>《基于图像分析的常见大米品种识别研究》</td>
@@ -121,32 +127,41 @@
                     </ul></div>
     
     <div id="skills">
-            <canvas id="skillsi" width="960px" height="60px" onclick="showecharts('skiech');changeDir('skillsi','工作技能')"></canvas>
-            <script>
-            var direction="down";
-            var canvas = document.getElementById('skillsi');
-            var ctx=canvas.getContext('2d');
-            sepi(ctx,40,32,"rgb(1,97,105)","工作技能");
-            arrow(direction,28,ctx);
-            </script>
+            <svg width="960" height="60" id="skillsi" onclick="showecharts('skiech');changeDirs()">
+                    <path d="M 94 56 A 32 32,0,1,1,149 56 z h 766 " 
+                    fill="rgb(1,97,105)" stroke="rgb(1,97,105)" stroke-width="3" />
+                    <rect x="825" y="28" rx="10" ry="10" width="36" height="18" fill="rgb(1,97,105)" />
+                    <path id="arrowdowns" 
+                          d="M 110 24 L 122 34 L134 24 
+                             M 110 34 L 122 44 L134 34" stroke="white" stroke-width="3" fill="none" style="display:none" />
+                    
+                             <path id="arrowups" 
+                         d="M 110 34 L 122 24 L 134 34 
+                            M 110 44 L 122 34 L134 44" stroke="white" stroke-width="3" fill="none" style="display:block" />
+                            <text x="170" y="43" fill="rgb(1,97,105)" >工作技能</text>
+              </svg>
+            
             <ul>
                 <li>三年使用R语言数据采集、清洗、分析经验（datatable、管道操作、读写Excel、爬虫）</li>
                 <li>熟练使用办公软件：Excel（数据透视表）、PPT、Word</li>
                 <li>熟练掌握html、css以及javascript，使用过Canvas前端绘图、echarts可视化类库</li>
                 <li>通过CET-6，具有良好的英语阅读能力</li>
             </ul>
-            <div id="skiech"></div>
+            <div id="skiech"  style="display:block"></div>
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
-                var myChart = echarts.init(document.getElementById('skiech'));
-        
+                var myChart = echarts.init(document.getElementById('skiech'),null,{ renderer : 'svg' });
                 // 指定图表的配置项和数据
                 var option = {
+                   
                            legend: {},
                            tooltip: {},
                            title: {
                                  text: 'Software',
+                                 top:30 ,
+                                 left:0,
                                  textStyle: {
+                                     fontSize:22,
                                      color: 'rgb(1,97,105)'
                                     
                                  }
@@ -179,7 +194,8 @@
                                       },
                                       textStyle:{
                                          fontSize: 20,
-                                          color:'black'
+                                          color:'black',
+                                        
                                       }
                                   }
                               },
@@ -324,7 +340,6 @@
                            }
                        }]
                     };
-        
                 // 使用刚指定的配置项和数据显示图表。
                 myChart.setOption(option); 
                 </script>
@@ -333,12 +348,13 @@
             
             </script>
             <div id="awards">
-                <canvas id="awardsi" width="960px" height="60px"></canvas>
-                <script>
-                var canvas = document.getElementById('awardsi');
-                var ctx=canvas.getContext('2d');
-                sepi(ctx,40,32,"rgb(1,97,105)","奖项荣誉");
-                </script>
+                    <svg width="960" height="60" id="awardsi">
+                            <path d="M 94 56 A 32 32,0,1,1,149 56 z h 766 " 
+                            fill="rgb(1,97,105)" stroke="rgb(1,97,105)" stroke-width="3" />
+                            <rect x="825" y="28" rx="10" ry="10" width="36" height="18" fill="rgb(1,97,105)" />
+                           
+                                    <text x="170" y="43" fill="rgb(1,97,105)" >奖项荣誉</text>
+                      </svg>
                 <table><tr>
                         <td>2017-2018</td>
                         <td>暨南大学优秀学生奖学金×<em>2</em></td>
@@ -349,16 +365,11 @@
                         </tr></table></div> 
 </div>
 <div id="footer">
-        <canvas id="footerbgi" width="960px" height="47px"></canvas>
-        <script>
-        var canvas = document.getElementById('footerbgi');
-        var ctx=canvas.getContext('2d');
-        drawcirclelist(7.5,7.5,64,ctx,"rgb(1,97,105)");
-        ctx.fillStyle ="rgb(1,97,105)";
-        ctx.fillRect(0,7.5,960,46);
-        </script>
-
+        <svg width="960" height="38" id="footerbgi">
+                <rect width="960" height="32" x="0" y="7.5" fill='rgb(1,97,105)'/>
+               </svg>
 </div>
     </div>
+    <script src="./personaljs.js"></script>
 </body>
 </html>
